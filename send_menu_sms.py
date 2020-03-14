@@ -60,7 +60,7 @@ class CasaPenchiMenuScrapper:
         if today.isoweekday() not in [6, 7]:
             client = Client(os.getenv('TWILIO_SID'), os.getenv('AUTH_TOKEN'))
             for number in phone_numbers:
-                client.messages.create(to=number, from_="+14707983339", body=sms_body)
+                client.messages.create(to=number, from_=os.getenv('TWILIO_PHONE_NUMBER'), body=sms_body)
 
     def get_and_send_today_menu(self, phone_numbers):
         sms_body = self.get_menu_from_facebook()
