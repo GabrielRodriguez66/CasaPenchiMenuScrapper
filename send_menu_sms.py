@@ -69,4 +69,4 @@ class CasaPenchiMenuScrapper:
 
 
 if __name__ == '__main__':
-    CasaPenchiMenuScrapper().get_and_send_today_menu(phone_numbers=["+17879006598"])
+    CasaPenchiMenuScrapper().get_and_send_today_menu(phone_numbers=[])
